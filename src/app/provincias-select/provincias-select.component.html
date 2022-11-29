@@ -1,9 +1,10 @@
 <p>provincias-select works!</p>
 
-<select>
-    <option selected disabled value="">Seleccione una opción</option>
-    <option *ngFor="let provincia of provincias" [value]="provincia">
-        {{provincia}}
+<select name="provinciasSelect" id="" [(ngModel)]="provinciaSeleccionada">
+    <option value="">Seleccione una opción</option>
+    <option *ngFor="let provincia of provincias" [ngvalue]="provincia">
+        {{provincia.nombre}}
     </option>
-
 </select>
+
+<h3>Provincia Seleccionada: {{ provinciaSeleccionada.nombre}}</h3>
